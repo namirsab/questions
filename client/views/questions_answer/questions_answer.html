@@ -1,0 +1,31 @@
+<template name="QuestionAnswers">
+	{{#with question}}
+	<div class="container top10">
+		<h2>{{title}}</h2>
+		<div class="panel panel-body">
+			{{> QuestionAnswersForm}}
+		</div>
+		<div class="top10">
+			{{> QuestionAnswersSubmit}}
+		</div>
+	</div>
+	{{/with}}
+</template>
+
+<template name="QuestionAnswersForm">
+	<div class="form-group">
+				{{#each answers}}
+				<div class="top10">
+					{{> QuestionAnswerInput}}
+				</div>
+				{{/each}}
+	</div>
+</template>
+
+<template name="QuestionAnswersSubmit">
+	<a id="submit" class="btn btn-primary btn-md hvr-icon-wobble-horizontal">Submit!</a>
+</template>
+
+<template name="QuestionAnswerInput">
+	<button id="option"  value="{{label}}" data-count="{{count}}" class="btn btn-block {{isSelected label}}">{{label}}</button>
+</template>

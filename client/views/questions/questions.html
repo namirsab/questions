@@ -1,0 +1,19 @@
+<template name="QuestionsList">
+	<div class="container">
+		<h3>Choose a question:</h3>
+		<table class="table table-striped table-hover ">
+			{{#each questions}}
+				{{> QuestionRow}}
+			{{/each}}
+		</table>
+	</div>
+</template>
+
+<template name="QuestionRow">
+	<tbody id="question">
+		<tr>
+			<td><a href="{{pathFor 'questions.answer' slug=this.slug}}"><h4>{{title}}</h4></a></td>
+			<td class="item-icon"><i class="fa fa-arrow-right pull-right"></i></td>
+		</tr>
+	</tbody>
+</template>

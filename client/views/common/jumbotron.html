@@ -1,0 +1,9 @@
+<template name="Jumbotron">
+	<div class="jumbotron">
+		<h1>{{title}}</h1>
+		<p>{{content}}</p>
+		{{#if button}}
+		<a href="{{pathFor path }}" class="{{button_class}}">{{button_label}}</a>
+		{{/if}}
+	</div>
+</template>

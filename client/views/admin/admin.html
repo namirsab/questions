@@ -1,0 +1,23 @@
+<template name="LoginForm">
+	<div class="container">
+		<form id="login_form" class="account-form" role="form">
+			<div class="form-group">
+				<h2>
+					Admin Questions!
+				</h2>
+				{{#if errorMessage}}
+				<div class="alert alert-warning">
+					{{errorMessage}}
+				</div>
+				{{/if}}
+				<div id="login-with-password top10" >
+					<input id="login_email" type="text" class="form-control" placeholder="Email address" required autofocus>
+					<input id="login_password" type="password" class="form-control" placeholder="Password" required>
+					<button class="btn btn-lg btn-primary btn-block hvr-icon-buzz-out" type="submit" data-loading-text="Please wait...">
+						Sign in
+					</button>
+				</div>
+			</div>
+		</form>
+	</div>
+</template>

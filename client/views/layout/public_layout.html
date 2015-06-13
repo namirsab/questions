@@ -1,0 +1,22 @@
+<template name="PublicLayout">
+	<div id="wrap">
+		<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+			<div class="navbar-container container">
+				<div class="navbar-header">
+					<a class="navbar-brand" href="{{pathFor 'index'}}">
+						Questions!
+					</a>
+				</div>
+			</div>
+		</div>
+		<div class="navbar-spacer">
+		</div>
+		{{> yield}}
+	</div>
+	<div id="footer">
+		<div class="footer-container container">
+			<p class="text-muted">
+			</p>
+		</div>
+	</div>
+</template>

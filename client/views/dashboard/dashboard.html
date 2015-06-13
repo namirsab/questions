@@ -1,0 +1,27 @@
+<template name="Dashboard">
+	<div class="container">
+		<h3>Welcome {{userFullName}}:</h3>
+		<div class="top10">
+			{{> AddQuestionButton}}
+		</div>
+		<table class="table table-striped table-hover top10">
+			{{#each questions}}
+				{{> QuestionRowWithActions}}
+			{{/each}}
+		</table>
+	</div>
+</template>
+
+<template name="AddQuestionButton">
+	<a href="{{pathFor 'dashboard.new_question'}}" class="btn btn-info btn-lg hvr-icon-float-away"><b>Add Question</b></a>
+</template>
+
+<template name="QuestionRowWithActions">
+	<tbody id="question-actions">
+		<tr>
+			<td id="question-title-col"><a id="question-title" href="{{pathFor 'dashboard.view_question' slug=slug}}"><h4>{{name}}</h4></a></td>
+			<td class="item-icon font-primary action" id="action-edit"><a href="{{pathFor 'dashboard.edit_question' slug=slug}}" id="edit-link"><i class="fa fa-edit"></i></a></td>
+			<td class="item-icon font-danger action" id="action-delete"><i class="fa fa-trash"></i></td>
+		</tr>
+	</tbody>
+</template>
